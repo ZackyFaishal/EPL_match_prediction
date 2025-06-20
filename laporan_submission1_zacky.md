@@ -187,7 +187,7 @@ Menunjukkan fluktuasi jumlah pertandingan per bulan, dengan puncak pada bulan-bu
     Secara keseluruhan, heatmap ini memberikan wawasan penting tentang hubungan antar variabel, yang dapat digunakan untuk rekayasa fitur atau pemilihan fitur dalam proses pemodelan.
 
 * **Boxplot**:
-    ![Boxplot.jpg](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/Boxplot.jpg)
+    ![Boxplot.jpg](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/Boxplot.png)
     Boxplot ini memvisualisasikan distribusi dan keberadaan *outlier* untuk beberapa variabel numerik, seperti `FTHG`, `FTAG`, `HS`, `AS`, `HST`, `AST`, `HF`, `AF`, `HC`, `AC`, `HY`, `AY`, `HR`, dan `AR` dalam hubungannya dengan `FTR` (Full Time Result). Setiap boxplot menunjukkan kuartil (Q1, median, Q3) dan rentang data, serta titik-titik yang merepresentasikan *outlier*.
 
     Beberapa observasi kunci dari boxplot adalah:
