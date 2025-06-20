@@ -146,7 +146,10 @@ Meskipun terdapat *outlier*, nilai-nilai ini dianggap wajar dalam konteks pertan
 
 Analisis distribusi masing-masing fitur secara individual menggunakan *countplot* untuk variabel kategorikal:
 
-* **Distribusi Pertandingan per Bulan**: Menunjukkan fluktuasi jumlah pertandingan per bulan, dengan puncak pada bulan-bulan tertentu.
+* **Distribusi Pertandingan per Bulan**: 
+!(https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/distribusi_pertandingan_perbulan.png)
+Menunjukkan fluktuasi jumlah pertandingan per bulan, dengan puncak pada bulan-bulan tertentu. Berdasarkan grafik "Distribusi Pertandingan per Bulan", terlihat bahwa jumlah pertandingan Liga Inggris bervariasi sepanjang tahun. Bulan April (bulan ke-4) dan Februari (bulan ke-2) menunjukkan jumlah pertandingan tertinggi, keduanya memiliki lebih dari 80 pertandingan. Sebaliknya, bulan Juli (bulan ke-7), September (bulan ke-9), dan Oktober (bulan ke-10) memiliki jumlah pertandingan paling sedikit, dengan angka di bawah 50 pertandingan. Pola ini kemungkinan mencerminkan jadwal liga sepak bola yang biasanya dimulai di akhir musim panas/awal musim gugur dan berakhir di musim semi, dengan jeda tertentu di bulan-bulan liburan.
+
 * **Distribusi Jam Pertandingan**: Menunjukkan sebagian besar pertandingan berlangsung pada sore hari (sekitar pukul 15.00-17.00 WIB).
 * **Distribusi Hari Pertandingan (0=Senin, 6=Minggu)**: Mengindikasikan distribusi pertandingan tersebar sepanjang minggu, dengan rata-rata mendekati hari Rabu (2).
 
