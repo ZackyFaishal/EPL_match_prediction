@@ -170,7 +170,7 @@ Menunjukkan fluktuasi jumlah pertandingan per bulan, dengan puncak pada bulan-bu
 #### 5. Multivariate Analysis
 
 * **Heatmap Korelasi Antar Variabel Numerik**:
-    ![heatmap_correlation.jpg](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/heatmap_correlation.jpg)
+    ![heatmap_correlation.jpg](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/heatmap_correlation.png)
     Heatmap ini memvisualisasikan matriks korelasi antar variabel numerik dalam dataset. Skala warna dari biru (korelasi negatif kuat) hingga merah (korelasi positif kuat) dengan putih/abu-abu (korelasi lemah/tidak ada).
     Beberapa observasi kunci dari heatmap adalah:
     * **Korelasi Positif Kuat**:
