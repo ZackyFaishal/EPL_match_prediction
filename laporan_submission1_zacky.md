@@ -147,12 +147,25 @@ Meskipun terdapat *outlier*, nilai-nilai ini dianggap wajar dalam konteks pertan
 Analisis distribusi masing-masing fitur secara individual menggunakan *countplot* untuk variabel kategorikal:
 
 * **Distribusi Pertandingan per Bulan**: 
-!(https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/distribusi_pertandingan_perbulan.png)
+![distribusi_pertandingan_perbulan.png](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/distribusi_pertandingan_perbulan.png)
 Menunjukkan fluktuasi jumlah pertandingan per bulan, dengan puncak pada bulan-bulan tertentu. Berdasarkan grafik "Distribusi Pertandingan per Bulan", terlihat bahwa jumlah pertandingan Liga Inggris bervariasi sepanjang tahun. Bulan April (bulan ke-4) dan Februari (bulan ke-2) menunjukkan jumlah pertandingan tertinggi, keduanya memiliki lebih dari 80 pertandingan. Sebaliknya, bulan Juli (bulan ke-7), September (bulan ke-9), dan Oktober (bulan ke-10) memiliki jumlah pertandingan paling sedikit, dengan angka di bawah 50 pertandingan. Pola ini kemungkinan mencerminkan jadwal liga sepak bola yang biasanya dimulai di akhir musim panas/awal musim gugur dan berakhir di musim semi, dengan jeda tertentu di bulan-bulan liburan.
 
-* **Distribusi Jam Pertandingan**: Menunjukkan sebagian besar pertandingan berlangsung pada sore hari (sekitar pukul 15.00-17.00 WIB).
-* **Distribusi Hari Pertandingan (0=Senin, 6=Minggu)**: Mengindikasikan distribusi pertandingan tersebar sepanjang minggu, dengan rata-rata mendekati hari Rabu (2).
+* **Distribusi Jam Pertandingan**:
+    ![distribusi_pertandingan_jam.png](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/distribusi_pertandingan_jam.png)
+    Menunjukkan sebagian besar pertandingan berlangsung pada sore hari (sekitar pukul 15.00-17.00 WIB). Berdasarkan grafik "Distribusi Jam Pertandingan", frekuensi pertandingan mencapai puncaknya pada pukul 15.00 (Hour 15) dengan lebih dari 200 pertandingan. Jam-jam lain yang juga memiliki jumlah pertandingan yang signifikan adalah pukul 14.00 (sekitar 100 pertandingan), pukul 17.00 (sekitar 70 pertandingan), dan pukul 20.00 (sekitar 115 pertandingan). Sebaliknya, jam 13.00 dan 18.00 menunjukkan jumlah pertandingan yang sangat sedikit, di bawah 20 pertandingan. Hal ini mengindikasikan bahwa sebagian besar pertandingan Liga Inggris dijadwalkan pada sore dan awal malam hari, dengan pukul 15.00 sebagai waktu yang paling populer.
 
+* **Distribusi Hari Pertandingan (0=Senin, 6=Minggu)**:
+    ![distribusi_haripertandingan.png](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/distribusi_haripertandingan.png)
+    Mengindikasikan distribusi pertandingan tersebar sepanjang minggu, dengan rata-rata mendekati hari Rabu (2). Berdasarkan grafik "Distribusi Hari Pertandingan", hari Senin (Weekday 1) memiliki jumlah pertandingan tertinggi, mencapai lebih dari 140 pertandingan. Hari-hari lain yang juga menunjukkan frekuensi pertandingan yang tinggi adalah Hari Rabu (Weekday 2) dan Hari Jumat (Weekday 4), masing-masing dengan lebih dari 110 pertandingan, serta Hari Minggu (Weekday 6) dengan sekitar 108 pertandingan. Sebaliknya, Hari Kamis (Weekday 3) dan Hari Sabtu (Weekday 5) memiliki jumlah pertandingan yang relatif lebih sedikit, di bawah 90 pertandingan. Hal ini menunjukkan bahwa meskipun pertandingan tersebar sepanjang minggu, ada kecenderungan untuk lebih banyak pertandingan pada awal minggu dan di pertengahan minggu, terutama pada hari Senin.(2).
+
+* **Countplot `HomeTeam` dan `AwayTeam`**:
+    ![unvariate_analysis.png](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/unvariate_analysis.png)
+    Grafik `Countplot HomeTeam` menunjukkan distribusi jumlah pertandingan kandang yang dimainkan oleh setiap tim, sedangkan `Countplot AwayTeam` menunjukkan distribusi jumlah pertandingan tandang. Karena nilai sumbu X (`HomeTeam` dan `AwayTeam`) telah di-*encode* menjadi numerik, sulit untuk mengidentifikasi tim mana secara spesifik. Namun, secara umum, terlihat ada beberapa tim (diwakili oleh angka-angka di sumbu X) yang bermain lebih banyak pertandingan kandang dan tandang dibandingkan tim lainnya. Distribusi ini menunjukkan bahwa tidak semua tim memiliki jumlah pertandingan kandang atau tandang yang sama persis dalam dataset ini.
+
+* **Countplot `FTR` (Full Time Result) dan `HTR` (Half Time Result)**:
+    Grafik `Countplot FTR` menunjukkan hasil akhir pertandingan: `Home Win`, `Away Win`, dan `Draw`. Terlihat bahwa `Home Win` (kemenangan tuan rumah) memiliki frekuensi tertinggi, yaitu sekitar 340 pertandingan. Diikuti oleh `Away Win` (kemenangan tim tamu) dengan sekitar 230 pertandingan, dan `Draw` (seri) dengan jumlah terendah, sekitar 150 pertandingan. Hal ini mengkonfirmasi bahwa tim tuan rumah memiliki keunggulan dalam kemenangan dibandingkan tim tandang, dan jumlah hasil seri relatif lebih sedikit.
+
+    Grafik `Countplot HTR` menunjukkan hasil babak pertama pertandingan: `Draw`, `Home Win`, dan `Away Win`. Berbeda dengan hasil akhir, hasil `Draw` (seri) di babak pertama adalah yang paling sering terjadi, dengan sekitar 270 pertandingan. Diikuti oleh `Home Win` (kemenangan tuan rumah) di babak pertama dengan sekitar 260 pertandingan, dan `Away Win` (kemenangan tim tamu) di babak pertama dengan jumlah terendah, sekitar 180 pertandingan. Ini menunjukkan bahwa pertandingan cenderung lebih sering berakhir seri pada babak pertama dibandingkan babak penuh waktu, dan tim tuan rumah masih memiliki sedikit keunggulan dibandingkan tim tamu.
 ## Data Preparation
 
 Berdasarkan *notebook* yang diberikan, tahapan *Data Preparation* setelah EDA adalah sebagai berikut:
