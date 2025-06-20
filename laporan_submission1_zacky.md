@@ -2,7 +2,28 @@
 
 ## Domain Proyek
 
-Proyek ini bertujuan untuk mengembangkan model prediktif untuk memprediksi hasil pertandingan sepak bola Liga Inggris dari musim 2020 hingga 2025. Prediksi ini didasarkan pada berbagai statistik pertandingan dan data historis untuk mengidentifikasi pola yang dapat memprediksi hasil akhir (Home Win, Draw, Away Win).
+Sepak bola merupakan salah satu olahraga paling populer di dunia, dan Liga Inggris (English Premier League) adalah salah satu liga yang paling banyak ditonton serta dianalisis. Banyak pihak, mulai dari penggemar, analis olahraga, hingga pelaku industri taruhan, tertarik untuk memahami faktor-faktor yang memengaruhi hasil pertandingan dan bahkan mencoba memprediksinya secara akurat. Oleh karena itu, analisis prediktif berbasis data menjadi pendekatan yang sangat relevan dan potensial untuk menggali wawasan dari data historis pertandingan.
+
+Proyek ini bertujuan untuk mengembangkan model prediktif untuk memprediksi hasil pertandingan sepak bola Liga Inggris dari musim 2020 hingga 2025. Prediksi ini didasarkan pada berbagai statistik pertandingan dan data historis untuk mengidentifikasi pola-pola yang dapat membantu memperkirakan hasil akhir, yakni menang kandang (Home Win), seri (Draw), atau menang tandang (Away Win).
+
+Dengan memanfaatkan pendekatan machine learning, proyek ini berupaya menemukan hubungan tersembunyi antara berbagai fitur pertandingan—seperti jumlah gol, tembakan ke gawang, kartu, dan waktu pertandingan—dengan hasil akhirnya. Pendekatan ini memungkinkan pembelajaran dari data historis untuk menghasilkan prediksi pada pertandingan baru yang belum pernah terlihat sebelumnya.
+
+Selain itu, proyek ini memiliki potensi manfaat di berbagai sektor:
+
+- **Bagi analis tim sepak bola**, model ini dapat membantu dalam menyusun strategi pertandingan.
+- **Bagi penggemar dan jurnalis olahraga**, hasil prediksi dapat menambah wawasan berbasis data dalam menganalisis pertandingan.
+- **Bagi industri taruhan olahraga**, model prediktif berbasis statistik dapat meningkatkan pendekatan berbasis probabilitas dan mengurangi ketergantungan pada intuisi semata.
+
+Penggunaan data dari lima musim terakhir memberikan cakupan yang luas terhadap dinamika performa tim, kondisi bermain, dan perubahan strategi yang mungkin terjadi dari musim ke musim. Proses pembersihan data dan rekayasa fitur juga dilakukan untuk memastikan bahwa data siap digunakan oleh algoritma pembelajaran mesin.
+
+Model yang dibangun diharapkan mampu menjadi sistem pendukung keputusan yang andal dalam konteks prediksi hasil pertandingan, dengan tetap mempertimbangkan dinamika kompleks yang terjadi dalam dunia sepak bola.
+
+### Referensi
+
+1. Rout, M., Dash, A. K., Majhi, B., & Nayak, S. (2021). *Football Match Outcome Prediction using Machine Learning Techniques*. Procedia Computer Science, 167, 2310–2319.
+2. football-data.co.uk. (2025). *Historical football results and match statistics*. Diakses dari: [https://www.football-data.co.uk/englandm.php](https://www.football-data.co.uk/englandm.php)
+3. Studi kasus pertama predictive analiytics [machine learning terapan](https://www.dicoding.com/academies/319/tutorials/16989)
+4. Template laporan [mlt](https://github.com/dicodingacademy/contoh-laporan-mlt/blob/main/format_laporan_submission_1.md)
 
 ## Business Understanding
 
@@ -42,32 +63,34 @@ Dataset yang digunakan dalam proyek ini adalah "Match Prediction Project" yang b
 
 ### Variabel
 
-Berikut adalah kolom-kolom yang digunakan setelah proses pembersihan data, beserta keterangannya:
+Berikut adalah kolom-kolom variabel yang digunakan setelah proses pembersihan data, untuk prediksi pertandingan beserta keterangannya:
 
-* `Div`: Divisi Liga
-* `Date`: Tanggal pertandingan
-* `Time`: Waktu pertandingan
-* `HomeTeam`: Tim tuan rumah
-* `AwayTeam`: Tim tamu
-* `FTHG`: Jumlah gol yang dicetak tim tuan rumah (Full Time)
-* `FTAG`: Jumlah gol yang dicetak tim tandang (Full Time)
-* `FTR`: Hasil pertandingan (H = Home win, D = Draw, A = Away win)
-* `HTHG`: Jumlah gol yang dicetak tim tuan rumah (Half Time)
-* `HTAG`: Jumlah gol yang dicetak tim tandang (Half Time)
-* `HTR`: Hasil babak pertama (H, D, A)
-* `Referee`: Wasit yang memimpin pertandingan
-* `HS`: Jumlah tembakan oleh tim tuan rumah
-* `AS`: Jumlah tembakan oleh tim tamu
-* `HST`: Tembakan tepat sasaran oleh tim tuan rumah
-* `AST`: Tembakan tepat sasaran oleh tim tamu
-* `HF`: Pelanggaran oleh tim tuan rumah
-* `AF`: Pelanggaran oleh tim tamu
-* `HC`: Sepak pojok oleh tim tuan rumah
-* `AC`: Sepak pojok oleh tim tamu
-* `HY`: Kartu kuning untuk tim tuan rumah
-* `AY`: Kartu kuning untuk tim tamu
-* `HR`: Kartu merah untuk tim tuan rumah
-* `AR`: Kartu merah untuk tim tamu
+| No | Nama Kolom | Deskripsi |
+|----|------------|-----------|
+| 1  | `Div`      | Divisi Liga |
+| 2  | `Date`     | Tanggal pertandingan |
+| 3  | `Time`     | Waktu pertandingan |
+| 4  | `HomeTeam` | Tim tuan rumah |
+| 5  | `AwayTeam` | Tim tamu |
+| 6  | `FTHG`     | Jumlah gol yang dicetak tim tuan rumah (Full Time) |
+| 7  | `FTAG`     | Jumlah gol yang dicetak tim tandang (Full Time) |
+| 8  | `FTR`      | Hasil pertandingan (H = Home win, D = Draw, A = Away win) |
+| 9  | `HTHG`     | Jumlah gol yang dicetak tim tuan rumah (Half Time) |
+| 10 | `HTAG`     | Jumlah gol yang dicetak tim tandang (Half Time) |
+| 11 | `HTR`      | Hasil babak pertama (H, D, A) |
+| 12 | `Referee`  | Wasit yang memimpin pertandingan |
+| 13 | `HS`       | Jumlah tembakan oleh tim tuan rumah |
+| 14 | `AS`       | Jumlah tembakan oleh tim tamu |
+| 15 | `HST`      | Tembakan tepat sasaran oleh tim tuan rumah |
+| 16 | `AST`      | Tembakan tepat sasaran oleh tim tamu |
+| 17 | `HF`       | Pelanggaran oleh tim tuan rumah |
+| 18 | `AF`       | Pelanggaran oleh tim tamu |
+| 19 | `HC`       | Sepak pojok oleh tim tuan rumah |
+| 20 | `AC`       | Sepak pojok oleh tim tamu |
+| 21 | `HY`       | Kartu kuning untuk tim tuan rumah |
+| 22 | `AY`       | Kartu kuning untuk tim tamu |
+| 23 | `HR`       | Kartu merah untuk tim tuan rumah |
+| 24 | `AR`       | Kartu merah untuk tim tamu |
 
 ### Tipe Data
 
@@ -110,7 +133,7 @@ Setelah data dimuat dan dibersihkan, dilakukan **Exploratory Data Analysis (EDA)
 Tidak ditemukan *missing values* pada tahap awal, menunjukkan bahwa semua kolom memiliki 732 entri non-null. Data sudah tidak ada yang kosong.
 
 #### 3. Outliers
-
+![outliers.png](https://github.com/ZackyFaishal/EPL_match_prediction/blob/main/Result_Photo/outliers.png)
 Deteksi *outlier* dilakukan menggunakan visualisasi *boxplot* dan metode Interquartile Range (IQR).
 
 * **FTHG dan FTAG**: Memiliki *outlier* terutama saat jumlah gol lebih dari 4 untuk FTHG dan lebih dari 5 untuk FTAG.
